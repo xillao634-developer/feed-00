@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Feedback;
 use App\Models\Department;
+use Illuminate\Routing\Controller;
 
 class AdminController extends Controller
 {

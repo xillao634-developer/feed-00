@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class NotificationController extends Controller
@@ -10,7 +11,7 @@ class NotificationController extends Controller
     public function index()
     {
         $notifications = Auth::user()->notifications()->paginate(20);
-        
+
         return view('notifications.index', compact('notifications'));
     }
 
@@ -49,3 +50,4 @@ class NotificationController extends Controller
         return redirect()->back()->with('success', 'All notifications cleared.');
     }
 }
+
